@@ -9,18 +9,22 @@ var Inflector = require('inflected');
  
 // rm('./scaffold.sh');
 
-fs.appendFile('./scaffold.sh', '#! /bin/bash \n');
-chmod('u+x', './scaffold.sh');
+var _path = '';
+
+module.exports = aaa = function(path){
+  _path = path;
+  
+  fs.appendFile(_path + '/scaffold.sh', '#! /bin/bash \n');
+  chmod('u+x',_path + '/scaffold.sh');
 
 
-var dir ='./result/';
+  var dir = _path + '/result/';
 
-fs.readdir(dir, function(err, files){
-  processnames(files) 
-});
-
-
-
+  fs.readdir(dir, function(err, files){
+    processnames(files) 
+  });
+  
+}
 function processnames(files) {
   var append_arr = [];
 
@@ -30,18 +34,16 @@ function processnames(files) {
     if(a !== undefined){  
       var t = 'moag ' + a.join(' ');
       console.log(t)
-      fs.appendFileSync('scaffold.sh',t + "\n" );
+      fs.appendFileSync(_path + '/scaffold.sh',t + "\n" );
     }
   })
   
   // Run external tool synchronously
-  if (exec('sh scaffold.sh').code !== 0) {
+  if (exec('sh ' + _path + '/scaffold.sh').code !== 0) {
     echo('Error: scaffold failed');
     exit(1);
   }
 }
-
-
 
 function process (file) {
   var file_name = file.split('/').pop();
