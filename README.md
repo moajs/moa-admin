@@ -13,6 +13,7 @@ moa-admin = use a db configuration to generate admins.
 
   moan new_project
   cd new_project
+  cp config/default.example.json config/default.json
   moa-admin
   npm start
 
