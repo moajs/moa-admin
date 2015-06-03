@@ -20,6 +20,7 @@ fs.readdir(dir, function(err, files){
 });
 
 
+
 function processnames(files) {
   var append_arr = [];
 
@@ -32,6 +33,12 @@ function processnames(files) {
       fs.appendFileSync('scaffold.sh',t + "\n" );
     }
   })
+  
+  // Run external tool synchronously
+  if (exec('sh scaffold.sh').code !== 0) {
+    echo('Error: scaffold failed');
+    exit(1);
+  }
 }
 
 
