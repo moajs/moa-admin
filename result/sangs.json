@@ -1,0 +1,40 @@
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "_id"
+		},
+		"value" : {
+			"types" : [
+				"ObjectId"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "name"
+		},
+		"value" : {
+			"types" : [
+				"String"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "pwd"
+		},
+		"value" : {
+			"types" : [
+				"Number"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	}
+]

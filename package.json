@@ -26,7 +26,9 @@
     "mongoose": "^4.0.4"
   },
   "dependencies": {
+    "bluebird": "^2.9.27",
     "get_collection_names": "^1.0.2",
+    "inflected": "^1.1.6",
     "shelljs": "^0.5.0"
   }
 }

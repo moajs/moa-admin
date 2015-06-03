@@ -1,0 +1,1 @@
+sed -i '' -e '1,12d' result/movies.json

@@ -1,0 +1,98 @@
+MongoDB shell version: 3.0.2
+connecting to: express-g-demo
+Variety: A MongoDB Schema Analyzer
+Version 1.5.0, released 14 May 2015
+Using collection of "users"
+Using query of { }
+Using limit of 3
+Using maxDepth of 99
+Using sort of { "_id" : -1 }
+Using outputFormat of "json"
+Using persistResults of false
+Using plugins of [ ]
+[
+	{
+		"_id" : {
+			"key" : "__v"
+		},
+		"value" : {
+			"types" : [
+				"Number"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "_id"
+		},
+		"value" : {
+			"types" : [
+				"ObjectId"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "password"
+		},
+		"value" : {
+			"types" : [
+				"String"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "username"
+		},
+		"value" : {
+			"types" : [
+				"String"
+			]
+		},
+		"totalOccurrences" : 3,
+		"percentContaining" : 100
+	},
+	{
+		"_id" : {
+			"key" : "address"
+		},
+		"value" : {
+			"types" : [
+				"String"
+			]
+		},
+		"totalOccurrences" : 2,
+		"percentContaining" : 66.66666666666667
+	},
+	{
+		"_id" : {
+			"key" : "avatar"
+		},
+		"value" : {
+			"types" : [
+				"String"
+			]
+		},
+		"totalOccurrences" : 2,
+		"percentContaining" : 66.66666666666667
+	},
+	{
+		"_id" : {
+			"key" : "phone_number"
+		},
+		"value" : {
+			"types" : [
+				"String"
+			]
+		},
+		"totalOccurrences" : 2,
+		"percentContaining" : 66.66666666666667
+	}
+]
