@@ -28,7 +28,9 @@
   "dependencies": {
     "bluebird": "^2.9.27",
     "get_collection_names": "^1.0.2",
+    "handlebars": "^3.0.3",
     "inflected": "^1.1.6",
-    "shelljs": "^0.5.0"
+    "shelljs": "^0.5.0",
+    "tpl_apply": "^1.0.2"
   }
 }

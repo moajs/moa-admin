@@ -1,11 +1,46 @@
+require('shelljs/global');
+var Promise = require("bluebird");
+
 var fs = require('fs')
+var child_process = require('child_process');
 var Inflector = require('inflected');
+
+// Run external tool synchronously
+ 
+// rm('./scaffold.sh');
+
+fs.appendFile('./scaffold.sh', '#! /bin/bash \n');
+chmod('u+x', './scaffold.sh');
+
+
+var dir ='./result/';
+
+fs.readdir(dir, function(err, files){
+  processnames(files) 
+});
+
+
+function processnames(files) {
+  var append_arr = [];
+
+  files.forEach(function(file){  
+    a = process(dir + '' +file);
+    // console.log(a);
+    if(a !== undefined){  
+      var t = 'moag ' + a.join(' ');
+      console.log(t)
+      fs.appendFileSync('scaffold.sh',t + "\n" );
+    }
+  })
+}
+
+
 
 function process (file) {
   var file_name = file.split('/').pop();
 
   var name = file_name.split('.')[0]
-  console.log(name)  
+  // console.log(name)  
 
   var singularize_name = Inflector.singularize(name) 
   var arr = [singularize_name];
@@ -28,9 +63,11 @@ function process (file) {
     
     return arr;
   }catch(e){
-    console.log(e)
+    // console.log(e)
   }
 }
+
+
 
 function _filter(key){
   if('__v' === key || '_id' === key){
@@ -39,12 +76,3 @@ function _filter(key){
   
   return key;
 }
-
-var dir ='./result/';
-
-fs.readdir(dir, function(err, files){
-  files.forEach(function(file){
-    a= process(dir + '/' +file);
-    console.log(a)
-  })
-});

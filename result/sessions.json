@@ -1,7 +1,0 @@
-MongoDB shell version: 3.0.2
-connecting to: express-g-demo
-Variety: A MongoDB Schema Analyzer
-Version 1.5.0, released 14 May 2015
-2015-06-03T15:13:21.376+0800 E QUERY    The collection specified (sessions) in the database specified (express-g-demo) does not exist or is empty.
-Possible collection options for database specified: movies, sangs, sessions, system.indexes, users. at variety.js:57
-failed to load: variety.js

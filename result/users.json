@@ -1,15 +1,3 @@
-MongoDB shell version: 3.0.2
-connecting to: express-g-demo
-Variety: A MongoDB Schema Analyzer
-Version 1.5.0, released 14 May 2015
-Using collection of "users"
-Using query of { }
-Using limit of 3
-Using maxDepth of 99
-Using sort of { "_id" : -1 }
-Using outputFormat of "json"
-Using persistResults of false
-Using plugins of [ ]
 [
 	{
 		"_id" : {
