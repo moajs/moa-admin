@@ -5,10 +5,8 @@ public/html/*
 npm-debug.log
 tmp/**
 out/**/*
-app
 new_project
 admin.html
 scaffold.sh
-tpl.js
 mongo.sh
 app

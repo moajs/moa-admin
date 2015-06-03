@@ -86,7 +86,7 @@ function admin_page(names){
     return out + "</ul>";
   });
 
-  var source  =  _path + '/tpl.js'
+  var source  =  _path + '/tpl1.js'
   var dest    =  _path + '/public/admin.html'
 
 
