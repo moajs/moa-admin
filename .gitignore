@@ -7,3 +7,6 @@ tmp/**
 out/**/*
 app
 new_project
+admin.html
+scaffold.sh
+tpl.js
