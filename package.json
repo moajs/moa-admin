@@ -1,6 +1,6 @@
 {
   "name": "moa-admin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "bluebird": "^2.9.27",
+    "config": "^1.14.0",
     "get_collection_names": "^1.0.2",
     "handlebars": "^3.0.3",
     "inflected": "^1.1.6",

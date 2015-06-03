@@ -5,22 +5,15 @@ var Inflector = require('inflected');
 var get_collection_names = require('get_collection_names');
 
 var child_process = require('child_process');
-
-// var file_path = __dirname;
-// var current_path = process.cwd();
-
-var host  = "127.0.0.1";
-var port  = "27017";
-var db    = "express-g-demo";
-
-
-// mongo express-g-demo --eval "var collection = 'sangs'" variety.js > result/sangs.json
-
 var _path = '';
 
-module.exports = aaa = function(path){
+module.exports = aaa = function(path, config){
+  var host = config.get('mongodb.host');
+  var port = config.get('mongodb.port');
+  var db = config.get('mongodb.db');
+  
   rm(path + '/mongo.sh')
-  rm('-Rf',path + '/result');
+  rm('-Rf', path + '/result');
   mkdir(path + '/result');
   
   _path = path;
