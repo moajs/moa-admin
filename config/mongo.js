@@ -20,7 +20,9 @@ options = {
 
 console.log(connectionString);
 
+
 mongoose.connect(connectionString, options, function(err, res) {
+
   if (err) {
     console.log('[mongoose log] Error connecting to: ', +connectionString + '. ' + err);
     return process.exit(1);
