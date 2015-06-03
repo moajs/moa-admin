@@ -1,3 +1,4 @@
+var fs = require('fs')
 var Inflector = require('inflected');
 
 function process (file) {
@@ -39,9 +40,11 @@ function _filter(key){
   return key;
 }
 
+var dir ='./result/';
 
-var file ='./result/movies.json';
-
-a= process(file);
-
-console.log(a)
+fs.readdir(dir, function(err, files){
+  files.forEach(function(file){
+    a= process(dir + '/' +file);
+    console.log(a)
+  })
+});
