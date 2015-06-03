@@ -10,6 +10,7 @@ var Inflector = require('inflected');
 // rm('./scaffold.sh');
 
 var _path = '';
+var dir = '';
 
 module.exports = aaa = function(path){
   _path = path;
@@ -18,14 +19,17 @@ module.exports = aaa = function(path){
   chmod('u+x',_path + '/scaffold.sh');
 
 
-  var dir = _path + '/result/';
-
-  fs.readdir(dir, function(err, files){
-    processnames(files) 
-  });
+  dir = _path + '/result/';
+  console.log(dir);
   
+  setTimeout(function(){
+    var files = fs.readdirSync(dir);
+    processnames(files) ;
+  },2000)
 }
 function processnames(files) {
+  console.log(files);
+  
   var append_arr = [];
 
   files.forEach(function(file){  

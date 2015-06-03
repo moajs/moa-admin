@@ -21,7 +21,7 @@ var _path = '';
 module.exports = aaa = function(path){
   rm(path + '/mongo.sh')
   rm('-Rf',path + '/result');
-  mkdir(path + 'result');
+  mkdir(path + '/result');
   
   _path = path;
   //
@@ -86,7 +86,7 @@ function admin_page(names){
     return out + "</ul>";
   });
 
-  var source  =  _path + '/tpl1.js'
+  var source  =  __dirname + '/tpl1.js'
   var dest    =  _path + '/public/admin.html'
 
 
