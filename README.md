@@ -7,20 +7,25 @@ moa-admin = use a db configuration to generate admins.
 
 ## Install
 
+```
   [sudo] npm install -g moa-admin
+```
 
 ## Usage
 
+```
+
   moan new_project
   cd new_project
-  cp config/default.example.json config/default.json
   moa-admin
   npm start
+```
 
 then open browser
 
+```
   http://127.0.0.1:3019/admin.html
-  
+```
 
 ## Contributing
 
